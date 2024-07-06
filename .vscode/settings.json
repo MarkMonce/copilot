@@ -1,0 +1,11 @@
+{
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "driver": "SQLite",
+            "name": "swlite",
+            "database": "${workspaceFolder:CopilotTest}/copilot.db"
+        }
+    ],
+    "sqltools.useNodeRuntime": true
+}

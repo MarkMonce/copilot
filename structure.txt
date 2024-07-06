@@ -1,0 +1,30 @@
+my_web_app/
+│
+├── models/                  # All model definitions
+│   ├── __init__.py
+│   ├── base.py              # Base class for all models, if using SQLAlchemy
+│   └── ...
+│
+├── crud/                    # CRUD operations, possibly shared across different objects
+│   ├── __init__.py
+│   └── ...
+│
+├── templates/               # HTML templates
+│   ├── product/
+│   │   ├── list.html
+│   │   └── detail.html
+│   ├── customer/
+│   │   ├── list.html
+│   │   └── detail.html
+│   └── ...
+│
+├── routes/                  # Route definitions
+│   ├── __init__.py
+│   ├── product_routes.py
+│   ├── customer_routes.py
+│   └── ...
+│
+├── static/                  # CSS, JavaScript, and other static files
+│   └── ...
+│
+└── app.py                   # Main application entry point
