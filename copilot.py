@@ -116,7 +116,7 @@ fakedata = Faker()
 
 with Session(engine) as session:
     
-    neworder = Order(order_date="2022-05-01 12:00:00", quantity=2, customer_id=10, product_id=44)
+    neworder = Order(order_date="2022-05-01 12:00:00", quantity=1, customer_id=15, product_id=41)
     #
 
     os.system('clear')
@@ -131,7 +131,7 @@ with Session(engine) as session:
     print(f'Product ordered: {product_instance.name}\n')
     print(f'Stock before order:  {product_instance.stockqty}\n'
           f'Price: {product_instance.price}\n'
-          f'Total: {neworder.total}\n')
+          f'Total Order: {neworder.total}\n')
     print('                    -------\n')
     print(f'Customer: {customer_instance.firstname} {customer_instance.lastname}\n')
     print(f'Account Balance:  {customer_instance.balance}\n')
@@ -141,21 +141,24 @@ with Session(engine) as session:
     if not (customer_instance.checkbalance(neworder.total) and product_instance.checkstock(neworder.quantity)):
         if not customer_instance.checkbalance(neworder.total):
             print('Account balance is insufficient for order')
-        else:
+        if not product_instance.checkstock(neworder.quantity):
             print('Stock is insufficient for order')
+        print('\n=================================Order not processed=================================')
     else:
         customer_instance.updatebalance(neworder.total)
         product_instance.updatestock(neworder.quantity)
         session.add(neworder)
 
+        print('ORDER PROCESSED SUCCESSFULLY ....................\n\n')
+
         session.commit()
 
-    print('##############################################\n\n')
+    print('\n\n#####################              POST ORDER STATUS       #########################\n\n')
     print(f'Product ordered: {product_instance.name}\n')
     print(f'Stock after order:  {product_instance.stockqty}\n'
-          f'Price: {product_instance.price}\n'
-          f'Total: {neworder.total}')
-    print('                    -------\n')
+        f'Price: {product_instance.price}\n'
+        f'Total Order: {neworder.total}')
+    print('--------------\n')
     print(f'Customer: {customer_instance.firstname} {customer_instance.lastname}\n')
     print(f'Remaining  Account Balance:  {customer_instance.balance}\n')
     print('##############################################\n\n')

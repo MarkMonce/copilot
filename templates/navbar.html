@@ -1,0 +1,46 @@
+<!--include navbar.html-->
+
+<!--Bootstrap navbar with light blue backround, light grey text, links to pages called "Customers", "Products", "Orders", "Other", and "Admin". Also include a useable dropwon list with five placeholder options and a search function on the right hand corner-->
+
+<nav class="navbar navbar-expand-lg bg-body-tertiary" style="background-color: #2e728b;">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html" style="color: whitesmoke;">Z-Commerce</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarScroll">
+        <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html" style="color: lightgrey;">User Page</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="customers.html" style="color: lightgrey;">Products</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="companies.html" style="color: lightgrey;">Customers</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="orders.html" style="color: lightgrey;">Orders</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="admins.html" style="color: lightgrey;">Admin</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: lightgrey;">
+              More...
+            </a>
+            <ul class="dropdown-menu" </ul>>
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </li>
+        </ul>
+        <form class="d-flex" style="margin-left: auto;" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" style="color: whitesmoke; border-color: white; margin-left: 5px;" type="submit">Search</button>
+        </form>
+        </form>
+      </div>
+    </div>
+  </nav>

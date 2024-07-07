@@ -1,0 +1,5 @@
+/* styles.css */
+#search-bar .btn-outline-success:hover {
+    background-color: grey !important;
+    border-color: grey !important;
+}
