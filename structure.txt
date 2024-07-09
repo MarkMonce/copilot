@@ -3,9 +3,11 @@ my_web_app/
 ├── models/                  # All model definitions
 │   ├── __init__.py
 │   ├── base.py              # Base class for all models, if using SQLAlchemy
-│   └── ...
+│   └── models.py	     # Can combine base.py and models.py
+				#In larger projects, models should be split into files for 
+				#For each object type
 │
-├── crud/                    # CRUD operations, possibly shared across different objects
+├── crud/                    # CRUD operations, possibly shared across different objects in my projects these are test files using 						direct data input
 │   ├── __init__.py
 │   └── ...
 │
